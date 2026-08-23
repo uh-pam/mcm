@@ -1,0 +1,48 @@
+<!DOCTYPE html><html lang="en-GB"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>About · MCM</title><meta name="description" content="About this course companion."><link rel="icon" href="/mcm/favicon.svg"><script>
+      // Applied before first paint so the page never flashes the wrong theme.
+      (function () {
+        try {
+          var t = localStorage.getItem("mcm-theme");
+          if (t) document.documentElement.setAttribute("data-theme", t);
+        } catch (e) {}
+      })();
+    </script><link rel="stylesheet" href="/mcm/_astro/about.ByqyTi11.css"></head> <body> <header class="site-header"> <div class="wrap bar"> <a class="brand" href="/mcm/">MCM <span>· Mathematical and Computational Methods</span></a> <nav class="site-nav"> <a href="/mcm/"> Units </a><a href="/mcm/practice"> Practice </a><a href="/mcm/ai"> Study with AI </a><a href="/mcm/about" aria-current="page"> About </a><a href="/mcm/search"> Search </a> <button class="theme-toggle" type="button" aria-label="Switch between light and dark theme" data-theme-toggle> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"> <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path> </svg> </button> </nav> </div> </header> <main class="wrap" data-pagefind-body>  <header class="page-head"> <h1>About this site</h1> <p class="lede">
+The companion to Mathematical and Computational Methods, a Level 4 module at
+ University of Hertfordshire.
+</p> </header> <div class="prose"> <h2>What is here</h2> <p>
+Ten units of lecture notes with 56 definitions, 144 worked
+      examples and 54 figures, plus 474 practice problems with
+      progressive hints and answer checking. Everything is generated from the same
+      LaTeX source as the printed notes, so the site and the PDFs cannot drift apart.
+</p> <h2>Worked solutions</h2> <p>
+Full worked solutions are not published here. They are worked through in the
+      tutorials, which is where the learning in them actually happens. What the site
+      gives you instead is a ladder of hints and a way to check a final answer, so
+      you can tell whether you have it right without being handed the method.
+</p> <h2>Your progress</h2> <p>
+Ticked objectives are stored in your own browser and nowhere else. There is no
+      account, no login, and nothing is sent anywhere — which also means your progress
+      does not follow you to another device, and clearing your browser data clears it.
+</p> <h2>Found a mistake?</h2> <p>
+Please report it — corrections during the first run of a module are genuinely
+      valuable. Bring it to a lecture or tutorial, and it will be fixed at source and
+      republished.
+</p> <h2>Colophon</h2> <p>
+Built as a static site from LaTeX: Pandoc preserves the notes' own definition,
+      theorem and example structure, KaTeX renders the mathematics at build time, and
+      every figure is the same TikZ drawing as in the PDF, compiled to SVG. No
+      tracking, no cookies, no third-party requests.
+</p> <p><a href="/mcm/">← Back to the units</a></p> </div>  </main> <footer class="site-footer"> <div class="wrap"> <p> Mathematical and Computational Methods — Level 4, University of Hertfordshire.
+          Worked solutions are given in class and are not published here.
+</p> </div> </footer> <script>
+      document.querySelector("[data-theme-toggle]")?.addEventListener("click", function () {
+        var root = document.documentElement;
+        var current = root.getAttribute("data-theme");
+        if (!current) {
+          current = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        var next = current === "dark" ? "light" : "dark";
+        root.setAttribute("data-theme", next);
+        try { localStorage.setItem("mcm-theme", next); } catch (e) {}
+      });
+    </script> </body> </html>
