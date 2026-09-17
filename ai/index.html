@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en-GB"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Study with AI · MCM</title><meta name="description" content="Four Socratic prompts for using an AI assistant as a study partner rather than an answer service."><link rel="icon" href="/mcm/favicon.svg"><script>
+<!DOCTYPE html><html lang="en-GB"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Study with AI · MCM</title><meta name="description" content="Get a prompt about any section of the notes that makes an AI assistant explain, then hand the work back to you."><link rel="icon" href="/mcm/favicon.svg"><script>
       // Applied before first paint so the page never flashes the wrong theme.
       (function () {
         try {
@@ -6,27 +6,50 @@
           if (t) document.documentElement.setAttribute("data-theme", t);
         } catch (e) {}
       })();
-    </script><link rel="stylesheet" href="/mcm/_astro/about.CKJNx2eW.css"></head> <body> <a class="skip-link" href="#main">Skip to content</a> <header class="site-header"> <div class="wrap bar"> <a class="brand" href="/mcm/">MCM <span>· Mathematical and Computational Methods</span></a> <nav class="site-nav"> <a href="/mcm/"> Units </a><a href="/mcm/practice"> Practice </a><a href="/mcm/review"> Review </a><a href="/mcm/ai" aria-current="page"> Study with AI </a><a href="/mcm/about"> About </a><a href="/mcm/search"> Search </a> <button class="theme-toggle" type="button" aria-label="Switch between light and dark theme" data-theme-toggle> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"> <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path> </svg> </button> </nav> </div> </header> <main class="wrap" id="main" data-pagefind-body>  <header class="page-head"> <h1>Learning with AI, not from it</h1> <p class="lede">
-Four prompts that turn a chatbot into a study partner — for revising an
-      idea, finding the slip in your own working, and setting problems for each
-      other. You have a Gemini education account; these work in any assistant.
-</p> </header> <div class="principle"> <p> <strong>The whole principle:</strong> an AI tutor is only useful when it makes
-      you do the thinking. Every prompt below instructs the model to guide you with
-      questions rather than hand you answers. Copy one into a fresh chat, fill in
-      the <code>[bracketed fields]</code>, and work through it honestly.
-</p> <p>
-An assistant that writes your solution has taught you nothing that survives
-      the exam hall — where you will have neither the assistant nor its confidence.
-</p> </div> <h2>Three habits that make the difference</h2> <ul class="habits"> <li> <b>Be specific.</b> A vague topic ("eigenvalues") gives a vague session; a
+    </script><link rel="stylesheet" href="/mcm/_astro/about.CA54aUCx.css"></head> <body> <a class="skip-link" href="#main">Skip to content</a> <!-- The page-top blackboard: decoration only, so hidden from assistive
+         technology, from search (it is outside main) and from print. --> <div class="board" aria-hidden="true"><div class="board-ink"></div></div> <script>
+      // Fade the board out over the first 60% of a screen of scrolling. A
+      // passive, rAF-throttled listener, because CSS scroll timelines are
+      // missing in Firefox and in the headless Chromium the gates use.
+      (function () {
+        var board = document.querySelector(".board"), frame = 0;
+        if (!board) return;
+        function update() {
+          frame = 0;
+          board.style.opacity = String(Math.max(0, 1 - window.scrollY / (window.innerHeight * 0.6)));
+        }
+        window.addEventListener("scroll", function () {
+          if (!frame) frame = requestAnimationFrame(update);
+        }, { passive: true });
+        update();
+      })();
+    </script> <header class="site-header"> <div class="wrap bar"> <a class="brand" href="/mcm/">MCM <span>· Mathematical and Computational Methods</span></a> <nav class="site-nav"> <a href="/mcm/"> Units </a><a href="/mcm/practice"> Practice </a><a href="/mcm/review"> Review </a><a href="/mcm/ai" aria-current="page"> Study with AI </a><a href="/mcm/about"> About </a><a href="/mcm/search"> Search </a> <button class="theme-toggle" type="button" aria-label="Switch between light and dark theme" data-theme-toggle> <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"> <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path> </svg> </button> </nav> </div> </header> <main class="wrap" id="main" data-pagefind-body>  <header class="page-head"> <h1>Learning with AI, not from it</h1> <p class="lede">
+An AI assistant will explain anything at any hour — and it will just as
+      happily do your thinking for you, which is how people fail exams. Use it the
+      first way: pick a section below and get a prompt that makes it explain, then
+      hand the work back to you.
+</p> </header> <section class="ask" id="ask" aria-labelledby="ask-heading" data-ask="{&#34;units&#34;:[{&#34;id&#34;:1,&#34;title&#34;:&#34;Foundations: numbers, sets and functions&#34;,&#34;sections&#34;:[&#34;Numbers, sets and notation&#34;,&#34;Functions and their properties&#34;,&#34;Elementary functions and their graphs&#34;,&#34;Summary&#34;]},{&#34;id&#34;:2,&#34;title&#34;:&#34;Complex numbers I: algebra and geometry&#34;,&#34;sections&#34;:[&#34;The algebra of complex numbers&#34;,&#34;The Argand diagram&#34;,&#34;The polar form&#34;,&#34;Summary&#34;]},{&#34;id&#34;:3,&#34;title&#34;:&#34;Complex numbers II: exponential form, De Moivre, roots&#34;,&#34;sections&#34;:[&#34;Euler’s formula and the exponential form&#34;,&#34;De Moivre’s theorem&#34;,&#34;Roots and applications&#34;,&#34;Summary&#34;]},{&#34;id&#34;:4,&#34;title&#34;:&#34;Vectors&#34;,&#34;sections&#34;:[&#34;Vectors and their algebra&#34;,&#34;Products of vectors&#34;,&#34;Lines and planes&#34;,&#34;Summary&#34;]},{&#34;id&#34;:5,&#34;title&#34;:&#34;Matrices&#34;,&#34;sections&#34;:[&#34;Why matrices? A system to return to&#34;,&#34;Matrices and their algebra&#34;,&#34;The determinant and the inverse&#34;,&#34;Linear systems and transformations&#34;,&#34;Summary&#34;]},{&#34;id&#34;:6,&#34;title&#34;:&#34;Eigensystems&#34;,&#34;sections&#34;:[&#34;Eigenvalues and eigenvectors&#34;,&#34;Diagonalisation and matrix powers&#34;,&#34;Application: dynamical systems and Markov chains&#34;,&#34;Summary&#34;]},{&#34;id&#34;:7,&#34;title&#34;:&#34;Differentiation I: limits and the rules&#34;,&#34;sections&#34;:[&#34;Limits, continuity and the derivative&#34;,&#34;Standard derivatives and the rules&#34;,&#34;Further techniques&#34;,&#34;Summary&#34;]},{&#34;id&#34;:8,&#34;title&#34;:&#34;Differentiation II: applications&#34;,&#34;sections&#34;:[&#34;Tangents, normals and the key theorems&#34;,&#34;Critical points and curve sketching&#34;,&#34;Optimisation&#34;,&#34;Summary&#34;]},{&#34;id&#34;:9,&#34;title&#34;:&#34;Integration I: the definite integral and substitution&#34;,&#34;sections&#34;:[&#34;The integral&#34;,&#34;Antiderivatives and the Fundamental Theorem of Calculus&#34;,&#34;Standard integrals and substitution&#34;,&#34;Summary&#34;]},{&#34;id&#34;:10,&#34;title&#34;:&#34;Integration II: techniques and applications&#34;,&#34;sections&#34;:[&#34;Further techniques&#34;,&#34;Applications of the definite integral&#34;,&#34;Setting up integrals from a description&#34;,&#34;Summary&#34;]}],&#34;context&#34;:&#34;I am a first-year university student on Mathematical and Computational Methods, a Level 4 mathematics module. I am studying Unit {n}, “{title}”, the section “{topic}”.&#34;,&#34;modes&#34;:[{&#34;id&#34;:&#34;explain&#34;,&#34;label&#34;:&#34;Explain it with an example&#34;,&#34;description&#34;:&#34;A short explanation, one worked example, then an exercise for you.&#34;,&#34;detailLabel&#34;:&#34;What exactly is unclear? Optional, but the sharper the better.&#34;,&#34;detailPlaceholder&#34;:&#34;e.g. why the limits change when I substitute&#34;,&#34;detailEmpty&#34;:&#34;&#34;,&#34;detailFilled&#34;:&#34;What I am unsure about: {detail}&#34;,&#34;template&#34;:&#34;{context}\n{detail}\n\nPlease:\n1. Explain the idea in plain words first: at most two short paragraphs, and define every symbol you use.\n2. Work ONE small explicit example with concrete numbers, showing every step, so that I can check each line by hand.\n3. Show the most common mistake and say exactly why it goes wrong.\n4. Then set me ONE similar exercise with different numbers. Do not solve it. Wait for my answer.\n5. When I answer, do not just say right or wrong. If I am wrong, give me a check I can run myself (differentiate back, substitute a value, try a special case, sketch it) and let me find the error.\n\nIf a rule only holds under a condition (x ≠ 0, a principal value, a continuous function, an invertible matrix), say so.&#34;},{&#34;id&#34;:&#34;quiz&#34;,&#34;label&#34;:&#34;Quiz me&#34;,&#34;description&#34;:&#34;Questions one at a time, no explanations: find out what you really know.&#34;,&#34;detailLabel&#34;:&#34;Anything to focus on? Optional.&#34;,&#34;detailPlaceholder&#34;:&#34;e.g. I can follow the examples but cannot start a problem&#34;,&#34;detailEmpty&#34;:&#34;&#34;,&#34;detailFilled&#34;:&#34;Please focus on: {detail}&#34;,&#34;template&#34;:&#34;{context}\n{detail}\n\nTest my understanding with questions. Do not explain anything unless I write \&#34;just tell me\&#34;.\n1. Ask ONE question at a time and wait for my answer. Start by asking me to state the main definition, rule or result of this section precisely.\n2. Vary the questions: a short computation, predicting a result before computing it, a special or extreme case, what a result means geometrically, when a method does not apply.\n3. When I am wrong or vague, do not correct me. Ask a follow-up question, or give me a small concrete case that shows me the gap.\n4. After six questions, tell me what I know well and what I should reread.&#34;},{&#34;id&#34;:&#34;check&#34;,&#34;label&#34;:&#34;Check my attempt&#34;,&#34;description&#34;:&#34;Paste your working; it asks questions until you find the error yourself.&#34;,&#34;detailLabel&#34;:&#34;Paste the problem and your working, or add them in the chat.&#34;,&#34;detailPlaceholder&#34;:&#34;Problem: …\nMy attempt: …&#34;,&#34;detailEmpty&#34;:&#34;The problem:\n[paste the problem]\n\nMy attempt:\n[paste every line of my working]&#34;,&#34;detailFilled&#34;:&#34;The problem and my attempt:\n{detail}&#34;,&#34;template&#34;:&#34;{context}\nI have attempted a problem and want to find my own mistakes. Do not rewrite my solution and do not give me a corrected one.\n\n{detail}\n\n1. First ask me to say what is given and what has to be found.\n2. Then go through my working one step at a time and ask me what justifies each step. ONE question at a time.\n3. If a step is wrong, do not name the error. Tell me which line to look at and give me a check I can run (differentiate back, substitute a value, estimate the size, check the units or the sign).\n4. When the solution is sound, ask me to state its key idea in one sentence.&#34;}]}"> <h2 id="ask-heading">Ask about a unit</h2> <div class="ask-card"> <label class="ask-step"> <span>Unit</span> <select class="ask-field" data-unit> <option value="1" selected> 1 · Foundations: numbers, sets and functions </option><option value="2"> 2 · Complex numbers I: algebra and geometry </option><option value="3"> 3 · Complex numbers II: exponential form, De Moivre, roots </option><option value="4"> 4 · Vectors </option><option value="5"> 5 · Matrices </option><option value="6"> 6 · Eigensystems </option><option value="7"> 7 · Differentiation I: limits and the rules </option><option value="8"> 8 · Differentiation II: applications </option><option value="9"> 9 · Integration I: the definite integral and substitution </option><option value="10"> 10 · Integration II: techniques and applications </option> </select> </label> <fieldset class="ask-step"> <legend>Section</legend> <div class="chip-row" data-topics> <label class="topic-chip"><input type="radio" name="ask-topic" value="Numbers, sets and notation" checked><span>Numbers, sets and notation</span></label><label class="topic-chip"><input type="radio" name="ask-topic" value="Functions and their properties"><span>Functions and their properties</span></label><label class="topic-chip"><input type="radio" name="ask-topic" value="Elementary functions and their graphs"><span>Elementary functions and their graphs</span></label><label class="topic-chip"><input type="radio" name="ask-topic" value="Summary"><span>Summary</span></label> </div> </fieldset> <fieldset class="ask-step"> <legend>What do you need?</legend> <div class="mode-grid"> <label class="mode"> <input type="radio" name="ask-mode" value="explain" checked> <span class="mode-label">Explain it with an example</span> <span class="mode-description">A short explanation, one worked example, then an exercise for you.</span> </label><label class="mode"> <input type="radio" name="ask-mode" value="quiz"> <span class="mode-label">Quiz me</span> <span class="mode-description">Questions one at a time, no explanations: find out what you really know.</span> </label><label class="mode"> <input type="radio" name="ask-mode" value="check"> <span class="mode-label">Check my attempt</span> <span class="mode-description">Paste your working; it asks questions until you find the error yourself.</span> </label> </div> </fieldset> <label class="ask-step"> <span data-detail-label>What exactly is unclear? Optional, but the sharper the better.</span> <textarea class="ask-field ask-detail" rows="2" data-detail placeholder="e.g. why the limits change when I substitute"></textarea> </label> <label class="ask-step"> <span>Your prompt — edit it freely</span> <textarea class="ask-preview" rows="12" data-preview spellcheck="false"></textarea> </label> <div class="ask-actions"> <a class="btn btn-primary" href="https://www.google.com/search?udm=50" target="_blank" rel="noopener" data-ai-mode>Ask Google AI ↗</a> <button class="btn" type="button" data-copy-preview>Copy prompt</button> </div> <p class="ask-status" data-status role="status" aria-live="polite">
+The prompt works the same in any assistant — your university Gemini account,
+          ChatGPT, Claude or Copilot.
+</p> </div> </section><h2>What a good session looks like</h2> <p class="section-intro">
+Unit 9, “Standard integrals and substitution”, with “Explain it with an
+    example”. The assistant's first reply is shortened.
+</p> <div class="chat"> <div class="chat-turn chat-ai"> <div class="chat-bubble"> <span class="chat-who">AI</span> <p>… Example: for ∫₀² 2x e^(x²) dx put u = x², so du = 2x dx, and the limits move with the variable: x = 0 gives u = 0 and x = 2 gives u = 4. The integral becomes ∫₀⁴ eᵘ du = e⁴ − 1. Check: d/dx e^(x²) = 2x e^(x²), and e⁴ − e⁰ = e⁴ − 1. Your turn: find ∫₀¹ x(x² + 1)³ dx.</p> </div>  </div><div class="chat-turn chat-you"> <div class="chat-bubble"> <span class="chat-who">You</span> <p>1/8</p> </div>  </div><div class="chat-turn chat-ai"> <div class="chat-bubble"> <span class="chat-who">AI</span> <p>Before I say anything, run a check: differentiate (x² + 1)⁴/8 to confirm it is an antiderivative, then take its value at x = 1 minus its value at x = 0.</p> </div> <p class="chat-note">It does not correct you. It hands you a check you can run.</p> </div><div class="chat-turn chat-you"> <div class="chat-bubble"> <span class="chat-who">You</span> <p>(16 − 1)/8 = 15/8, not 1/8. I set u = x² + 1 but kept the limits 0 and 1. In u they are 1 and 2, so ½∫₁² u³ du = ½ · 15/4 = 15/8. ✓</p> </div> <p class="chat-note">You found the error and checked the answer yourself. That is what stays.</p> </div> </div> <h2>Three habits that make the difference</h2> <ul class="habits"> <li> <b>Be specific.</b> A vague question ("eigenvalues") gets a vague answer; a
       sharp one ("why a repeated eigenvalue does not always give two independent
-      eigenvectors") gives a sharp one.
-</li> <li> <b>Do not let it lecture.</b> If the model slips into explaining, reset it:
-      "You are explaining — ask me instead."
+      eigenvectors") gets a sharp one.
+</li> <li> <b>Make it hand the work back.</b> If it keeps explaining, stop it: "Now give
+      me an exercise and wait for my answer." Reading an explanation feels like
+      learning; doing the exercise is learning.
 </li> <li> <b>Verify everything.</b> These models get mathematics wrong, confidently and
       often — a dropped sign, an invented identity, a plausible-looking integral
-      that is simply false. Check every claim against your notes. Catching the
-      tutor's errors is part of the exercise, not a distraction from it.
-</li> </ul> <h2>The four prompts</h2> <article class="prompt-card" data-prompt> <header> <h3>1 · Revise a concept</h3> <p>Use after a lecture, to find out whether you actually understand an idea or have only seen it.</p> </header> <div class="prompt-body"> <pre data-prompt-text>Socratic Mathematics Tutor
+      that is simply false. Check every claim against your notes: differentiate the
+      answer back, substitute a value. Catching the tutor's errors is part of the
+      exercise, not a distraction from it.
+</li> </ul> <h2>Longer sessions</h2> <p class="section-intro">
+Four fuller prompts: revising a whole idea, finding the slip in your own
+    working, and setting problems for each other. Open one to read it; fill in the
+    [bracketed fields] in the chat.
+</p> <details class="prompt-card" data-prompt> <summary> <span class="prompt-title">1 · Revise a concept</span> <span class="prompt-when">Use after a lecture, to find out whether you actually understand an idea or have only seen it.</span> </summary> <div class="prompt-body"><pre data-prompt-text>Socratic Mathematics Tutor
 
 You are my Socratic tutor for a topic from a first-year university mathematics
 module. Your goal is to deepen my understanding by questioning me — not to give
@@ -61,7 +84,7 @@ End goal: I should be able to explain the idea to a coursemate, work a small
 example unaided, and name the mistake people usually make. When you judge I am
 there, say so and set me ONE short problem to do on my own.
 
-Begin now with your first diagnostic question.</pre> </div> <div class="prompt-actions"> <button class="btn" type="button" data-copy>Copy prompt</button> <button class="btn" type="button" data-expand>Show all</button> </div> </article><article class="prompt-card" data-prompt> <header> <h3>2 · Find the error in your own working</h3> <p>Use when your answer disagrees with the back of the sheet, or when you want your reasoning stress-tested.</p> </header> <div class="prompt-body"> <pre data-prompt-text>Socratic Checking Partner
+Begin now with your first diagnostic question.</pre></div> <div class="prompt-actions"> <button class="btn" type="button" data-copy>Copy prompt</button> <span class="ask-status" data-status role="status" aria-live="polite"></span> </div> </details><details class="prompt-card" data-prompt> <summary> <span class="prompt-title">2 · Find the error in your own working</span> <span class="prompt-when">Use when your answer disagrees with the back of the sheet, or when you want your reasoning stress-tested.</span> </summary> <div class="prompt-body"><pre data-prompt-text>Socratic Checking Partner
 
 You are my Socratic partner for checking my own mathematical working. Help me
 become someone who can find his or her own errors — do not simply locate the
@@ -95,7 +118,7 @@ Rules for you:
  8. Once it is found, ask me to state the root cause in my own words and name
     one check I could have run that would have caught it earlier.
 
-Begin by asking me what result I expected and what I actually got.</pre> </div> <div class="prompt-actions"> <button class="btn" type="button" data-copy>Copy prompt</button> <button class="btn" type="button" data-expand>Show all</button> </div> </article><article class="prompt-card" data-prompt> <header> <h3>3 · Set a problem for a coursemate</h3> <p>Work in pairs. Designing a good problem forces more understanding than solving one. Use this half first.</p> </header> <div class="prompt-body"> <pre data-prompt-text>Problem Setter (working with a peer)
+Begin by asking me what result I expected and what I actually got.</pre></div> <div class="prompt-actions"> <button class="btn" type="button" data-copy>Copy prompt</button> <span class="ask-status" data-status role="status" aria-live="polite"></span> </div> </details><details class="prompt-card" data-prompt> <summary> <span class="prompt-title">3 · Set a problem for a coursemate</span> <span class="prompt-when">Work in pairs. Designing a good problem forces more understanding than solving one. Use this half first.</span> </summary> <div class="prompt-body"><pre data-prompt-text>Problem Setter (working with a peer)
 
 You are helping me design a mathematics problem to set for a coursemate on my
 first-year methods module. I am the author — you help me sharpen the problem,
@@ -123,7 +146,7 @@ Rules for you:
     needing a technique we have not been taught is not a fair problem.
 
 End goal: a clean unambiguous problem, a statement of what may be assumed, and
-my own verified model solution that I keep back.</pre> </div> <div class="prompt-actions"> <button class="btn" type="button" data-copy>Copy prompt</button> <button class="btn" type="button" data-expand>Show all</button> </div> </article><article class="prompt-card" data-prompt> <header> <h3>4 · Solve your partner&#39;s problem</h3> <p>The other half of the pair exercise. Then meet and compare — without AI.</p> </header> <div class="prompt-body"> <pre data-prompt-text>Solver&#39;s Assistant (the peer receiving the problem)
+my own verified model solution that I keep back.</pre></div> <div class="prompt-actions"> <button class="btn" type="button" data-copy>Copy prompt</button> <span class="ask-status" data-status role="status" aria-live="polite"></span> </div> </details><details class="prompt-card" data-prompt> <summary> <span class="prompt-title">4 · Solve your partner&#39;s problem</span> <span class="prompt-when">The other half of the pair exercise. Then meet and compare — without AI.</span> </summary> <div class="prompt-body"><pre data-prompt-text>Solver&#39;s Assistant (the peer receiving the problem)
 
 A coursemate has set me a problem. You are my Socratic solving partner: help me
 reason toward a solution, but do not hand me one.
@@ -147,13 +170,135 @@ Rules for you:
  6. Once I have an answer, ask me to say why it is right and where the argument
     would break if a hypothesis were dropped.
 
-Begin by asking me to restate the problem in my own words.</pre> </div> <div class="prompt-actions"> <button class="btn" type="button" data-copy>Copy prompt</button> <button class="btn" type="button" data-expand>Show all</button> </div> </article><h2>Working in pairs</h2> <ol class="habits" style="counter-reset:none"> <li>Pair up. Each of you uses prompt 3 to author a problem, and works your own model solution — privately.</li><li>Swap. Hand over only the problem, not your solution.</li><li>Solve. Each of you works the other&#39;s problem using prompt 4.</li><li>Debrief without AI. Compare: did the solution match? Did the problem have a hole? Was the setter&#39;s own model answer actually right? This human step is the point of the exercise.</li> </ol> <div class="trap"> <h3>⚠ Two traps to avoid</h3> <p> <strong>The setter must verify their own model solution.</strong> Do not trust
+Begin by asking me to restate the problem in my own words.</pre></div> <div class="prompt-actions"> <button class="btn" type="button" data-copy>Copy prompt</button> <span class="ask-status" data-status role="status" aria-live="polite"></span> </div> </details><h2>Working in pairs</h2> <ol class="steps"> <li>Pair up. Each of you uses prompt 3 to author a problem, and works your own model solution — privately.</li><li>Swap. Hand over only the problem, not your solution.</li><li>Solve. Each of you works the other&#39;s problem using prompt 4.</li><li>Debrief without AI. Compare: did the solution match? Did the problem have a hole? Was the setter&#39;s own model answer actually right? This human step is the point of the exercise.</li> </ol> <div class="trap"> <h3>⚠ Two traps to avoid</h3> <p> <strong>The setter must verify their own model solution.</strong> Do not trust
       an AI-generated answer key. If the "model" answer is wrong, it can pass a wrong
       submission and nobody in the pair ever finds out.
 </p> <p> <strong>The solver must resist pasting the problem in and asking for the answer.</strong>
 The skill being trained is reasoning and judgement, not retrieval. The whole
       exercise depends on not doing this.
-</p> </div> <script type="module">document.querySelectorAll("[data-prompt]").forEach(t=>{const c=t.querySelector("[data-prompt-text]").textContent??"";t.querySelector("[data-copy]").addEventListener("click",async o=>{const e=o.currentTarget;try{await navigator.clipboard.writeText(c),e.textContent="Copied ✓"}catch{const n=document.createRange();n.selectNodeContents(t.querySelector("[data-prompt-text]"));const a=window.getSelection();a?.removeAllRanges(),a?.addRange(n),e.textContent="Selected — press Ctrl+C"}window.setTimeout(()=>{e.textContent="Copy prompt"},2500)}),t.querySelector("[data-expand]").addEventListener("click",o=>{const e=o.currentTarget;t.classList.toggle("is-open"),e.textContent=t.classList.contains("is-open")?"Collapse":"Show all"})});</script>  </main> <footer class="site-footer"> <div class="wrap"> <p> Mathematical and Computational Methods — Level 4, University of Hertfordshire.
+</p> </div> <script>
+    (function () {
+      var COPIED = "Copied ✓";
+      var SELECTED = "Could not copy automatically: the prompt is selected, press Ctrl+C.";
+
+      /** Copy synchronously inside the click; the async API is the fallback. */
+      function copy(text) {
+        var area = document.createElement("textarea");
+        area.value = text;
+        area.setAttribute("readonly", "");
+        area.style.position = "fixed"; area.style.opacity = "0"; area.style.top = "0";
+        document.body.appendChild(area);
+        area.select();
+        var ok = false;
+        try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+        document.body.removeChild(area);
+        if (!ok && navigator.clipboard) {
+          navigator.clipboard.writeText(text).catch(function () {});
+          ok = true;
+        }
+        return ok;
+      }
+      function say(status, message) {
+        if (!status) return;
+        status.textContent = message;
+        status.classList.add("is-live");
+      }
+
+      // ---- Ask about a unit ----------------------------------------------
+      var ask = document.querySelector("[data-ask]");
+      if (ask) {
+        var data = JSON.parse(ask.dataset.ask);
+        var unitSelect = ask.querySelector("[data-unit]");
+        var topics = ask.querySelector("[data-topics]");
+        var detail = ask.querySelector("[data-detail]");
+        var detailLabel = ask.querySelector("[data-detail-label]");
+        var preview = ask.querySelector("[data-preview]");
+        var status = ask.querySelector("[data-status]");
+        var aiMode = ask.querySelector("[data-ai-mode]");
+
+        var fill = function (template, values) {
+          return template.replace(/\{(\w+)\}/g, function (whole, key) {
+            return key in values ? values[key] : whole;
+          });
+        };
+        var unit = function () {
+          return data.units.find(function (u) { return String(u.id) === unitSelect.value; });
+        };
+        var mode = function () {
+          var picked = ask.querySelector("input[name=ask-mode]:checked");
+          return data.modes.find(function (m) { return m.id === (picked && picked.value); }) || data.modes[0];
+        };
+        var topic = function () {
+          var picked = ask.querySelector("input[name=ask-topic]:checked");
+          return picked ? picked.value : "";
+        };
+
+        var renderTopics = function () {
+          topics.textContent = "";
+          unit().sections.forEach(function (title, index) {
+            var label = document.createElement("label");
+            label.className = "topic-chip";
+            var input = document.createElement("input");
+            input.type = "radio"; input.name = "ask-topic"; input.value = title; input.checked = index === 0;
+            var span = document.createElement("span");
+            span.textContent = title;
+            label.appendChild(input); label.appendChild(span);
+            topics.appendChild(label);
+          });
+        };
+        var syncAiMode = function () {
+          aiMode.href = "https://www.google.com/search?udm=50&q=" + encodeURIComponent(preview.value);
+        };
+        var render = function () {
+          var u = unit(), m = mode(), typed = detail.value.trim();
+          detailLabel.textContent = m.detailLabel;
+          detail.placeholder = m.detailPlaceholder;
+          var context = fill(data.context, { n: u.id, title: u.title, topic: topic() });
+          var detailText = typed ? fill(m.detailFilled, { detail: typed }) : m.detailEmpty;
+          preview.value = fill(m.template, { context: context, detail: detailText })
+            .replace(/\n{3,}/g, "\n\n");
+          syncAiMode();
+        };
+        // The preview is editable, and an edited prompt is the one to send.
+        preview.addEventListener("input", syncAiMode);
+
+        // A unit page links here as ai/?unit=N#ask, so arrive on that unit.
+        var wanted = new URLSearchParams(location.search).get("unit");
+        if (wanted && data.units.some(function (u) { return String(u.id) === wanted; })) {
+          unitSelect.value = wanted;
+          renderTopics();
+        }
+        unitSelect.addEventListener("change", function () { renderTopics(); render(); });
+        // The preview is excluded: its change event fires on blur, and
+        // re-rendering then would throw away what the student just edited.
+        ask.addEventListener("change", function (event) {
+          if (event.target !== unitSelect && event.target !== preview && event.target !== detail) render();
+        });
+        detail.addEventListener("input", render);
+        render();
+
+        ask.querySelector("[data-copy-preview]").addEventListener("click", function () {
+          if (copy(preview.value)) { say(status, COPIED); }
+          else { preview.select(); say(status, SELECTED); }
+        });
+      }
+
+      // ---- The long prompts ----------------------------------------------
+      document.querySelectorAll("[data-prompt]").forEach(function (card) {
+        var source = card.querySelector("[data-prompt-text]");
+        var body = source.textContent || "";
+        var status = card.querySelector("[data-status]");
+        card.querySelector("[data-copy]").addEventListener("click", function () {
+          if (copy(body)) { say(status, COPIED); return; }
+          var range = document.createRange();
+          range.selectNodeContents(source);
+          var selection = window.getSelection();
+          if (selection) { selection.removeAllRanges(); selection.addRange(range); }
+          say(status, SELECTED);
+        });
+      });
+    })();
+  </script>  </main> <footer class="site-footer"> <div class="wrap"> <p> Mathematical and Computational Methods — Level 4, University of Hertfordshire.
           Worked solutions are given in class and are not published here.
 </p> </div> </footer> <script>
       document.querySelector("[data-theme-toggle]")?.addEventListener("click", function () {
