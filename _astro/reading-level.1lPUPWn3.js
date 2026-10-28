@@ -1,0 +1,1 @@
+const c="mcm-reading-level",r=e=>e==="full"||e==="core";function n(e=location.search){const t=new URLSearchParams(e).get("level");if(r(t))return t;try{const a=localStorage.getItem(c);if(r(a))return a}catch{}return"full"}function l(e){try{localStorage.setItem(c,e)}catch{}}export{c as R,r as i,n as r,l as w};
